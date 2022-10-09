@@ -5,7 +5,7 @@ import torchvision.models as models
 class DenseNet(nn.Module):
     def __init__(self, pretrained=True):
         super(DenseNet, self).__init__()
-        num_classes = 13
+        num_classes = 107
         self.model = models.densenet201(pretrained=pretrained)
         self.model.classifier = nn.Linear(1920, num_classes)
         
